@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <a href="#home" class="logo">YourName<span>.</span></a>
+    <nav>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <button id="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+      <button id="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">Hello, I'm</p>
+        <h1>Your Name</h1>
+        <h2>I am a <span id="typing"></span><span class="cursor">|</span></h2>
+        <p class="lead">I build clean, responsive websites with HTML, CSS and JavaScript.</p>
+        <div class="buttons">
+          <a href="#projects" class="btn primary">View My Work</a>
+          <a href="#contact" class="btn outline">Contact Me</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <div class="avatar">YN</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section reveal">
+      <h2 class="title">About Me</h2>
+      <div class="about-grid">
+        <p>
+          I'm a student and aspiring web developer who loves turning ideas into
+          working websites. I enjoy learning new things, solving problems and
+          building projects that look good on every screen size.
+        </p>
+        <ul class="facts">
+          <li><strong>Name:</strong> Your Name</li>
+          <li><strong>Location:</strong> Your City, India</li>
+          <li><strong>Email:</strong> you@example.com</li>
+          <li><strong>Interests:</strong> Web design, coding, music</li>
+        </ul>
+      </div>
+      <div class="stats">
+        <div><span class="count" data-target="10">0</span>+<p>Projects</p></div>
+        <div><span class="count" data-target="3">0</span><p>Certificates</p></div>
+        <div><span class="count" data-target="2">0</span>+<p>Years Learning</p></div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt reveal">
+      <h2 class="title">My Skills</h2>
+      <div class="skills">
+        <div class="skill"><label>HTML <span>90%</span></label><div class="bar"><div class="fill" data-width="90"></div></div></div>
+        <div class="skill"><label>CSS <span>80%</span></label><div class="bar"><div class="fill" data-width="80"></div></div></div>
+        <div class="skill"><label>JavaScript <span>65%</span></label><div class="bar"><div class="fill" data-width="65"></div></div></div>
+        <div class="skill"><label>Git &amp; GitHub <span>55%</span></label><div class="bar"><div class="fill" data-width="55"></div></div></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section reveal">
+      <h2 class="title">My Projects</h2>
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="html">HTML/CSS</button>
+        <button class="filter" data-filter="js">JavaScript</button>
+      </div>
+      <div class="cards">
+        <article class="card" data-cat="html">
+          <div class="thumb t1">🌐</div>
+          <h3>College Website</h3>
+          <p>Multi-page site with navbar, registration form and gallery.</p>
+          <a href="#">View Project →</a>
+        </article>
+        <article class="card" data-cat="js">
+          <div class="thumb t2">🧮</div>
+          <h3>Calculator</h3>
+          <p>A calculator built with vanilla JavaScript.</p>
+          <a href="#">View Project →</a>
+        </article>
+        <article class="card" data-cat="js">
+          <div class="thumb t3">✅</div>
+          <h3>To-Do App</h3>
+          <p>Add, complete and delete tasks, saved in localStorage.</p>
+          <a href="#">View Project →</a>
+        </article>
+        <article class="card" data-cat="html">
+          <div class="thumb t4">🍽️</div>
+          <h3>Restaurant Landing Page</h3>
+          <p>Responsive landing page using Flexbox and Grid.</p>
+          <a href="#">View Project →</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section alt reveal">
+      <h2 class="title">Contact Me</h2>
+      <form id="contact-form" novalidate>
+        <div class="field">
+          <input type="text" id="name" placeholder="Your Name">
+          <small class="error"></small>
+        </div>
+        <div class="field">
+          <input type="email" id="email" placeholder="Your Email">
+          <small class="error"></small>
+        </div>
+        <div class="field">
+          <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+          <small class="error"></small>
+        </div>
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Your Name. All rights reserved.</p>
+  </footer>
+
+  <button id="to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
